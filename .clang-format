@@ -1,0 +1,37 @@
+---
+# Based on the LLVM style.
+# Run `clang-format -style=llvm -dump-config` to see the full set of defaults.
+BasedOnStyle: LLVM
+Language: Cpp
+Standard: c++17
+
+# Layout
+IndentWidth: 4
+TabWidth: 4
+UseTab: ForIndentation
+ColumnLimit: 100
+AccessModifierOffset: -2
+
+# Pointers and references
+PointerAlignment: Left
+DerivePointerAlignment: false
+
+# Alignment
+AlignAfterOpenBracket: true
+AlignOperands: Align
+AlignTrailingComments:
+  Kind: Always
+
+# Statements
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+BreakBeforeBraces: Attach
+
+# Includes and namespaces
+SortIncludes:
+  Enabled: true
+  IgnoreCase: false
+  IgnoreExtension: false
+FixNamespaceComments: true
+NamespaceIndentation: None
+...
