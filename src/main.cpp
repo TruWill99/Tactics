@@ -1,7 +1,7 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "src/math/vec2.h"
+#include "math/vec2.h"
 
 using namespace Tactics::Math;
 
