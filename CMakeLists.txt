@@ -6,7 +6,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(SFML 3 COMPONENTS Graphics Window System Audio REQUIRED)
 
-add_executable(Tactics main.cpp)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-target_include_directories(Tactics PRIVATE src src/math)
-target_link_libraries(Tactics PRIVATE SFML::Graphics SFML::Window SFML::System SFML::Audio)
+enable_testing()
+
+add_subdirectory(src)
+add_subdirectory(tests)
