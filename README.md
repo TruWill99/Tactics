@@ -8,8 +8,8 @@ from scratch on top of my own math types, rather than leaning on an engine.
 
 ## Status
 
-Early. Window opens and the Vec2 math class is in place. Grid and pathfinding
-are next.
+Early. Window opens and the Vec2 math class is in place, with unit tests.
+Grid and pathfinding are next.
 
 ## Requirements
 
@@ -27,7 +27,13 @@ cmake --build build
 ## Run
 
 ```sh
-./build/Tactics
+./build/src/Tactics
+```
+
+## Test
+
+```sh
+ctest --test-dir build --output-on-failure
 ```
 
 ## Layout
@@ -43,6 +49,9 @@ Tactics/
 ├── CMakeLists.txt
 └── README.md
 ```
+
+The game code builds into a library that both the game and the test
+executable link, so tests exercise the same compiled code.
 
 Directories and files use snake_case, types use PascalCase. Formatting is
 handled by `clang-format` with the config in `.clang-format`.
